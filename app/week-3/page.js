@@ -1,14 +1,14 @@
-import Item from "./item";
+
 import ItemList from "./item-list";
 
 
 export default function Page(){
     return(
-        <main>
-            <h1>
+        <main className="text-center">
+            <h1 className="font-bold">
                 Shopping List:
-                <ItemList/>
             </h1>
+              <ItemList/>
         </main>
     )
 }
