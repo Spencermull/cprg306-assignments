@@ -18,16 +18,19 @@ export default function NewItem() {
     }
   }
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const item = {name, quantity, category};
+    const item = { name, quantity, category };
     console.log("Created item: ", item);
-    alert(`Name: ${item.name}, Quantity: ${item.quantity}, Category: ${item.category}`);
+    alert(
+      `Name: ${item.name}, Quantity: ${item.quantity}, Category: ${item.category}`
+    );
     setName("");
     setCategory("produce");
-   
   };
+
+
+
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen">
@@ -50,9 +53,37 @@ export default function NewItem() {
         <h2>Range is from 1-20</h2>
 
         <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Item Name"
+            className="px-2 py-1 rounded"
+          />
+
+          <select
+            name="category"
+            value={category}
+            onChange={(event) => setCategory(event.target.value)}
+            className="px-2 py-1 rounded ml-2 text-black"
+          >
+            <option value="produce">Produce</option>
+            <option value="meat">Meat</option>
+            <option value="frozen foods">Frozen Foods</option>
+            <option value="canned goods">Canned Goods</option>
+            <option value="dry goods">Dry Goods</option>
+            <option value="beverages">Beverages</option>
+            <option value="snacks">Snacks</option>
+            <option value="household">Household</option>
+            <option value="other">Other</option>
+          </select>
+          
+         
+
           <button
             type="submit"
-            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 ml-2"
           >
             Submit
           </button>
