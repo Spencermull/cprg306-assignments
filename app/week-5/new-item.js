@@ -29,29 +29,10 @@ export default function NewItem() {
     setCategory("produce");
   };
 
-
-
-
   return (
     <section className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="mb-4 text-xl">Current Quantity: {quantity}</h1>
       <div className="flex gap-4 bg-gradient-to-br from-sky-400 to-blue-700 p-4 rounded">
-        <button
-          type="button"
-          onClick={Increment}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-          Add
-        </button>
-        <button
-          type="button"
-          onClick={Decrement}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-          Remove
-        </button>
-        <h2>Range is from 1-20</h2>
-
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -78,16 +59,29 @@ export default function NewItem() {
             <option value="household">Household</option>
             <option value="other">Other</option>
           </select>
-          
-         
 
           <button
             type="submit"
-            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 ml-2"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-green-600 ml-2"
           >
             Submit
           </button>
         </form>
+        <button
+          type="button"
+          onClick={Increment}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Add
+        </button>
+        <button
+          type="button"
+          onClick={Decrement}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Remove
+        </button>
+        <h2>Range is from 1-20</h2>
       </div>
     </section>
   );
