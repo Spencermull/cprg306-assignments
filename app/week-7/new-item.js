@@ -21,7 +21,7 @@ export default function NewItem({onAddItem}) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const item = { name, quantity, category, id:Math.random.toString().substring(1,10000000) };
+    const item = { name, quantity, category, id:Math.random.toString(10).substring(1,100) };
     console.log("Created item: ", item);
     onAddItem(item);
     setName("");

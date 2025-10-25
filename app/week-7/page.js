@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <main className="text-center">
       <h1 className="font-bold">Shopping List:</h1>
-      <NewItem onAddItem={handleAddItem} />
       <ItemList items={items} />
+      <NewItem onAddItem={handleAddItem} />
     </main>
   );
 }
