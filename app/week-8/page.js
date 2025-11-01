@@ -23,8 +23,8 @@ export default function Page() {
   return (
     <main className="text-left">
       <h1 className="font-bold">Shopping List:</h1>
-      <ItemList items={items} onItemSelect={handleItemSelect} />
-      <div>
+      <div className="flex gap-4 items-start">
+        <ItemList items={items} onItemSelect={handleItemSelect} />
         <NewItem onAddItem={handleAddItem} />
       </div>
       <div>

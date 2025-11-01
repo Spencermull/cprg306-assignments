@@ -29,7 +29,7 @@ export default function NewItem({onAddItem}) {
 
 
   return (
-    <section className="flex items-start justify-center min-h-screen pt-12"> 
+    <section className="flex items-start justify-center"> 
       <div className="w-72 bg-gradient-to-br from-sky-400 to-blue-700 p-4 rounded-md shadow-md flex flex-col gap-3">
         <h1 className="text-left text-lg font-medium">Current Quantity: {quantity}</h1>
 
