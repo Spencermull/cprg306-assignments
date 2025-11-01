@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 async function fetchMealIdeas(ingredient) {
   try {
@@ -31,7 +32,7 @@ return (
     <div className="w-72 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg shadow-md p-4">
         <h2 className="text-lg font-semibold text-blue-800 mb-1">Meal Ideas</h2>
         {ingredient && (
-            <p className="text-xs text-blue-600 mb-3">Results for <span className="font-semibold italic">"{ingredient}"</span></p>
+            <p className="text-xs text-blue-600 mb-3">Results for <span className="font-semibold italic">&quot;{ingredient}&quot;</span></p>
         )}
         {!ingredient && (
             <p className="text-xs text-blue-500 italic mb-3">Select an item to see meal ideas</p>
@@ -42,9 +43,11 @@ return (
                     key={meal.idMeal}
                     className="flex flex-col items-center bg-transparent rounded-md p-2 hover:bg-blue-100 transition-colors cursor-pointer"
                 >
-                    <img 
+                    <Image 
                         src={meal.strMealThumb} 
                         alt={meal.strMeal}
+                        width={288}
+                        height={80}
                         className="w-full h-20 rounded-md object-cover mb-1"
                     />
                     <span className="text-xs font-medium text-blue-900 text-center">{meal.strMeal}</span>
