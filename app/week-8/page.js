@@ -26,8 +26,6 @@ export default function Page() {
       <div className="flex gap-4 items-start">
         <ItemList items={items} onItemSelect={handleItemSelect} />
         <NewItem onAddItem={handleAddItem} />
-      </div>
-      <div>
         <MealIdeas ingredient={selectedItemName} />
       </div>
     </main>
