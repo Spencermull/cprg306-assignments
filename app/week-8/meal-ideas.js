@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
 
 async function fetchMealIdeas(ingredient) {
   try {
@@ -43,7 +43,7 @@ return (
                     key={meal.idMeal}
                     className="flex flex-col items-center bg-transparent rounded-md p-2 hover:bg-blue-100 transition-colors cursor-pointer"
                 >
-                    <Image 
+                    <img
                         src={meal.strMealThumb} 
                         alt={meal.strMeal}
                         width={288}
