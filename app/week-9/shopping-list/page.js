@@ -9,11 +9,12 @@ import { useState } from "react";
 
 export default function Page() {
   const { user } = useUserAuth();
-  if (!user) {
-    return null;
-  }
+
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
+    if (!user) {
+    return null;
+  }
   function handleAddItem(newItem) {
     setItems([newItem, ...items]);
   }
