@@ -4,8 +4,13 @@ import ItemList from "./item-list";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
 import { useState } from "react";
+import { useUserAuth } from "@/app/contexts/AuthContext";
 
 export default function Page() {
+  const { user } = useUserAuth();
+  if (!user) {
+    return null;
+  }
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
   function handleAddItem(newItem) {
