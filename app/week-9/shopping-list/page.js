@@ -1,10 +1,11 @@
 "use client";
 import NewItem from "./new-item";
+import { useUserAuth } from "@/app/contexts/AuthContext";
 import ItemList from "./item-list";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
 import { useState } from "react";
-import { useUserAuth } from "@/app/contexts/AuthContext";
+
 
 export default function Page() {
   const { user } = useUserAuth();
