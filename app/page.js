@@ -6,13 +6,14 @@ export default function Home() {
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
       <p>
         Go to Week 2 <Link href="week-2">→ </Link>
-        Go to Week 3 <Link href="week-3">→ </Link> 
-        Go to Week 4 <Link href="week-4">→ </Link> 
-        Go to Week 5 <Link href="week-5">→ </Link>  
-        Go to Week 6<Link href= "week-6">→ </Link>  
-        Go to Week 7<Link href= "week-7">→ </Link> 
-        Go to Week 8<Link href= "week-8">→ </Link> 
-        Go to Week 9<Link href= "week-9">→ </Link> 
+        Go to Week 3 <Link href="week-3">→ </Link>
+        Go to Week 4 <Link href="week-4">→ </Link>
+        Go to Week 5 <Link href="week-5">→ </Link>
+        Go to Week 6<Link href="week-6">→ </Link>
+        Go to Week 7<Link href="week-7">→ </Link>
+        Go to Week 8<Link href="week-8">→ </Link>
+        Go to Week 9<Link href="week-9">→ </Link>
+        Go to Week 10<Link href="week-10">→ </Link>
       </p>
     </main>
   );
