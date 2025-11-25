@@ -17,7 +17,7 @@ export default function Page() {
 
   useEffect(() => {
     loadItems();
-  }, [user]);
+  }, [user?.uid]);
 
   if (!user) {
     return null;
