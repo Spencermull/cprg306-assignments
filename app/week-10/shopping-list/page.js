@@ -17,7 +17,7 @@ export default function Page() {
 
   useEffect(() => {
     loadItems();
-  }, [user?.uid]);
+  }, [user?.uid]); // cannot tell if i can use user as dependency or user?.uid but i tried both and did not notice a difference
 
   if (!user) {
     return null;
